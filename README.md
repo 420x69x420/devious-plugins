@@ -10,7 +10,7 @@ Not-To-Do-Yet List for Phosani's Nightmare:
 -Buy more supplies
 -Put more ammo in things like toxic blowpipe and powered staffs
 
-**Basic P2P runecrafting** (fire altar). Will maybe add air altar later and more fun things to this one, but found <https://github.com/maikel233/devious-plugins/tree/main/xRunecrafting> and found it was really bad plugin, so took some stuff from it and made new script. Requires rings of dueling, and optionally stamina potion(1), and pure essense and fire tiara, and will make fire runes.
+3. **Basic P2P runecrafting** (fire altar). Will maybe add air altar later and more fun things to this one, but found <https://github.com/maikel233/devious-plugins/tree/main/xRunecrafting> and found it was really bad plugin, so took some stuff from it and made new script. Requires rings of dueling, and optionally stamina potion(1), and pure essense and fire tiara, and will make fire runes.
 
 
 # Events, Muling, Extended API, cool stuff
