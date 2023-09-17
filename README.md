@@ -17,7 +17,7 @@ muleworld=394
 craftworld=308
 altar=air
 ```
-change worlds to whatever, and if altar=air, then goes to air altar, anything else goes to body altar. This farm does not use main mule server, rather records usernames of all accs running the scripts to local files to communicate this information (mule tile is hardcoded woops)
+change worlds to whatever, and if altar=air, then goes to air altar, anything else goes to body altar. This farm does not use main mule server, rather records usernames of all accs running the scripts to local files to communicate this information (mule tile is hardcoded woops). The mule requires noted air / body tiaras and pure essence
 
 4. **F2P / P2P Mule** Mules for things and stuff. Need to run this script on an account that has items in its inventory in order for mule requests to be fulfilled.
 
