@@ -41,4 +41,4 @@ Sometime I will write an explanation of these things, because I can predict the 
 
 PS sry Burak wouldn't let me dev for Storm Client so :c 
 
-PPS I made the API methods with the collaboration of a person named Mokka
+PPS I made the API methods with the collaboration of a person named Mokka and the help of the devious discord
