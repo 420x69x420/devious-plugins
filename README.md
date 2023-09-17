@@ -10,11 +10,35 @@ Not-To-Do-Yet List for Phosani's Nightmare:
 -Buy more supplies
 -Put more ammo in things like toxic blowpipe and powered staffs
 
-3. **Basic P2P runecrafting** (fire altar). Will maybe add air altar later and more fun things to this one, but found <https://github.com/maikel233/devious-plugins/tree/main/xRunecrafting> and found it was really bad plugin, so took some stuff from it and made new script. Requires rings of dueling, and optionally stamina potion(1), and pure essense and fire tiara, and will make fire runes.
+3. **F2P Runecrafting Farm** This is an all-in-one runecrafting leveling package for F2P. The first script crafts runes at air or body altar, the second script runs essence to the crafters, and the mule script mules to the runners. Requires a file "%USERNAME/.openosrs/plugins/runner_settings.txt" with contents:
+
+```
+muleworld=394
+craftworld=308
+altar=air
+```
+change worlds to whatever, and if altar=air, then goes to air altar, anything else goes to body altar. This farm does not use main mule server, rather records usernames of all accs running the scripts to local files to communicate this information (mule tile is hardcoded woops)
+
+4. **F2P / P2P Mule** Mules for things and stuff. Need to run this script on an account that has items in its inventory in order for mule requests to be fulfilled.
+
+4. **AIO Sharks Cooker** Mules for bond, mules for gp, and buys food to cook until 99 and then gets cooking cape and keeps cooking, and mules off gp when out of food. Muling requires muling-f2p (bond money) and muling-p2p (food money) scripts to be running on accounts after starting main mule server locally.
+
+5. **Basic P2P runecrafting** (fire altar). Will maybe add air altar later and more fun things to this one, but found <https://github.com/maikel233/devious-plugins/tree/main/xRunecrafting> and found it was really bad plugin, so took some stuff from it and made new script. Requires rings of dueling, and optionally stamina potion(1), and pure essense and fire tiara, and will make fire runes.
+
+6. **Basic Wines Cookers** mostly for learning examples. Teach yourself the way.
+
+7. **Devious Plugins Extended - Expanded** I fixed some bugs and added worldhopping to some of the unethical scripts from [devious plugins extended](https://github.com/melxin/devious-plugins-extended). The scripts hop every few hours so you get levels more. Cooker also has progressive config option for cooking all food of lvl in bank.
+
+# Events, Muling, Extended API, cool scripting stuff
+
+Sometime I will write an explanation of these things, because I can predict the future. Trust me. The sharks plugin exemplifies the usage of the extended API. Run jar task in gradle for the plugin using the API and the API will be packaged in same final .jar via shadowjar to use common shared methods.
+
+# Central Mule Server
+
+[this](https://github.com/420x69x420/devious-mule-server) is required for the muling events from the API. Start the .bat file and the server will listen on local network port 42067 for mule communications from mule clients and bot clients to coordinate mule locations + worlds.
 
 
-# Events, Muling, Extended API, cool stuff
-
-Sometime I will write an explanation of these things, because I can predict the future. Trust me. They can help with scripting. For now just know that if you want to build the 420xplugins from source, run jar task for the specific plugin and the API will be packaged in same final .jar via shadowjar to use commonly used methods.
 
 PS sry Burak wouldn't let me dev for Storm Client so :c 
+
+PPS I made the API methods with the collaboration of a person named Mokka
