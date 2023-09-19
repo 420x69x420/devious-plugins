@@ -124,7 +124,7 @@ public class Restock extends Leaf {
             return -1;
         }
         int highestRawID = P2PMeat.getHighestLvlMeat().getRawId();
-        int rawFoodPrice = (int)(Prices.getItemPrice(highestRawID) * 1.5);
+        int rawFoodPrice = (highestRawID == P2PMeat.SHRIMPS.getRawId() ? Rand.nextInt(400,750) : (int)(Prices.getItemPrice(highestRawID) * 1.5));
         int maxFoodCanBuy = ownedCoinsCount / rawFoodPrice;
         maxFoodCanBuy -= 5;
         int randMaxCap = (highestRawID == P2PMeat.SHRIMPS.getRawId() ? Rand.nextInt(400,1000) : Rand.nextInt(2000,6000));

@@ -9,15 +9,15 @@ public class RSUnits {
         if (number >= 1_000_000_000) {
             divisor = 1_000_000_000;
             postfix = "B";
-        } else if (number >= 1_000_000) {
+        } else if (number >= 10_000_000) {
             divisor = 1_000_000;
             postfix = "M";
-        } else if (number >= 1_000) {
+        } else if (number >= 10_000) {
             divisor = 1_000;
             postfix = "K";
         }
 
-        int formattedNumber = (int) Math.ceil((double) number / divisor);
+        int formattedNumber = (int) Math.floor((double) number / divisor);
 
         // Using the NumberFormat class to add commas
         NumberFormat nf = NumberFormat.getInstance();

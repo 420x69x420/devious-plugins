@@ -47,7 +47,7 @@ public class MuleF2PPlugin extends Script implements PluginInterface {
 
     @Override
     public String botGroup() {
-        return "p2p"; //this tells the mule server what group(s) of mules the bot should mule to - comma-seperated String if multiple groups
+        return "f2p"; //this tells the mule server what group(s) of mules the bot should mule to - comma-seperated String if multiple groups
     }
 
     private void makeTree() {

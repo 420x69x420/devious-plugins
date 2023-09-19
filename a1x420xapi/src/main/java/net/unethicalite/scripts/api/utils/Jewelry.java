@@ -21,6 +21,16 @@ public class Jewelry {
             ItemID.GAMES_NECKLACE7,
             ItemID.GAMES_NECKLACE8
     };
+    public static int[] duelingRingIDs = {
+            ItemID.RING_OF_DUELING1,
+            ItemID.RING_OF_DUELING2,
+            ItemID.RING_OF_DUELING3,
+            ItemID.RING_OF_DUELING4,
+            ItemID.RING_OF_DUELING5,
+            ItemID.RING_OF_DUELING6,
+            ItemID.RING_OF_DUELING7,
+            ItemID.RING_OF_DUELING8
+    };
     public static int[] chargedGloryIDs = {
             ItemID.AMULET_OF_GLORY1,
             ItemID.AMULET_OF_GLORY2,
@@ -59,6 +69,14 @@ public class Jewelry {
     }
     public static int getLeastOwnedSkillsNecklaceID() {
         for (int id : skillsNecklaceIDs) {
+            if (OwnedItems.containsIncludingNoted(id)) {
+                return id;
+            }
+        }
+        return -1;
+    }
+    public static int getLeastOwnedDuelingID() {
+        for (int id : duelingRingIDs) {
             if (OwnedItems.containsIncludingNoted(id)) {
                 return id;
             }

@@ -11,6 +11,7 @@ import net.runelite.api.Item;
 import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.ItemContainerChanged;
 import net.runelite.client.eventbus.Subscribe;
+import net.unethicalite.api.entities.NPCs;
 import net.unethicalite.api.items.Trade;
 import net.unethicalite.api.util.Text;
 import net.unethicalite.scripts.api.muling.messages.MessageType;
@@ -107,10 +108,16 @@ public class MuleClient extends WebSocketClient {
     }
 
     public MuleRequestMessage getRequestForBotName(String botName) {
-        return MuleQueue.activeRequests.stream()
+        if (MuleQueue.activeRequests.isEmpty()) {
+            return null;
+        }
+        List<MuleRequestMessage> potentialMsgs = MuleQueue.activeRequests.stream()
                 .filter(activeRequest -> activeRequest.playerName.equals(botName))
-                .findAny()
-                .orElseGet(null);
+                .collect(Collectors.toList());
+        if (potentialMsgs.isEmpty()) {
+            return null;
+        }
+        return potentialMsgs.get(0);
     }
 
     @Subscribe

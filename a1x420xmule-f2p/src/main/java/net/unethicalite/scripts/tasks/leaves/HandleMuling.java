@@ -173,7 +173,7 @@ public class HandleMuling extends Leaf {
             return -1;
         }
         int activeTradersSize = MuleQueue.activeTraders.size();
-        log.info("Have active trader size: "+activeTradersSize);
+        log.debug("Have active trader size: "+activeTradersSize);
         if (!MuleQueue.activeTraders.isEmpty()) {
             Player bot = Players.getNearest(MuleQueue.activeTraders.get(0));
             if (bot == null) {
@@ -196,7 +196,7 @@ public class HandleMuling extends Leaf {
             return -1;
         }
 
-        log.info("Waiting on a trader! active traders list is null (populated when receive unknown trader confirmation)");
+        log.debug("Waiting on a trader! active traders list is null (populated when receive unknown trader confirmation)");
         return -1;
     }
     private void disposeMuleClientInstance() {

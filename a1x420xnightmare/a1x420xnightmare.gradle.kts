@@ -1,4 +1,4 @@
-version = "0.0.1"
+version = "0.0.2"
 
 project.extra["PluginName"] = "Nightmare Helper"
 project.extra["PluginDescription"] = "Kills Phosani's Nightmare, loots, banks, re-gears, and repeats"
